@@ -1,5 +1,6 @@
 __pycache__
 *.py[cod]
+.vscode
 *$py.class
 *.swp
 .idea
