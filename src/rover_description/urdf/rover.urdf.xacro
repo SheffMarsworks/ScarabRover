@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <!--    http://wiki.ros.org/urdf/XML/link   -->
-<robot name="scarab">
+<robot name="scarab"
+    xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:arg name="is_sim" default="true" />
+    <xacro:include filename="$(find rover_description)/urdf/rover_control.xacro" />
+
     <link name="base_footprint"/>
 
     <joint name="base_footprint_joint" type="fixed">

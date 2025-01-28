@@ -20,7 +20,7 @@ def generate_launch_description():
     # world_file = os.path.join(rover_description, "worlds", "wro_world.sdf")
     model_arg = DeclareLaunchArgument(
         name="model",
-        default_value=os.path.join(rover_description, "urdf", "robot.urdf"),
+        default_value=os.path.join(rover_description, "urdf", "rover.urdf.xacro"),
         description="Absolute path to robot urdf file",
     )
 
@@ -36,7 +36,7 @@ def generate_launch_description():
 
     robot_description = ParameterValue(
         Command(
-            ["xacro ", LaunchConfiguration("model"), " is_ignition:=", is_ignition]
+            ["xacro ", LaunchConfiguration("model")]
         ),
         value_type=str,
     )
