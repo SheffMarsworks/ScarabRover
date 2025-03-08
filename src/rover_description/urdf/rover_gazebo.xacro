@@ -4,13 +4,13 @@
 
   <!-- Wheels -->
   <gazebo reference="wheel1_link">
-    <mu1>1000000000000000.0</mu1> //1st Friction coefficient: They are extermely high to avoid slippage in simulation
-    <mu2>1000000000000000.0</mu2> //2nd Friction coefficient: They are extermely high to avoid slippage in simulation
+    <mu1>1000000000000000.0</mu1> 
+    <mu2>1000000000000000.0</mu2> 
     <kp>1000000000000.0</kp>
     <kd>10.0</kd>
-    <minDepth>0.001</minDepth> //Accuracy of solver during tha simulation
+    <minDepth>0.001</minDepth> 
     <maxVel>0.1</maxVel>
-    <fdir1>1 0 0</fdir1> // Direction of the rotation of the wheel
+    <fdir1>1 0 0</fdir1>
   </gazebo>
 
   <gazebo reference="wheel2_link">
