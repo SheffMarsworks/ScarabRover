@@ -92,6 +92,9 @@ def generate_launch_description():
             "/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan",
             '/camera/image_raw@sensor_msgs/msg/Image@ignition.msgs.Image',
             '/camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo',
+            '/depth_camera/points@sensor_msgs/msg/PointCloud2@ignition.msgs.PointCloudPacked',
+            '/depth_camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo',
+            '/depth_camera/image@sensor_msgs/msg/Image@ignition.msgs.Image',
         ],
         remappings=[
             ("/imu", "/imu/out"),
