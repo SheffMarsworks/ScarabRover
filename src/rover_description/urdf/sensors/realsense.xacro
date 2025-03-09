@@ -4,16 +4,16 @@
   <joint name="realsense_joint" type="fixed">
     <parent link="body_link"/>
     <child link="realsense_link"/>
-    <origin xyz="-0.36 0.0 0.12" rpy="0.0 0.0 ${pi}"/>
+    <origin xyz="-0.34 0.0 0.08" rpy="0.0 0.0 ${pi}"/>
   </joint>
 
   <link name="realsense_link">
     <visual>
       <geometry>
-        <box size="0.010 0.03 0.03"/>
+        <mesh filename="package://rover_description/meshes/d435.dae" scale="1 1 1"/>
       </geometry>
-      <material name="yellow">
-        <color rgba="1 1 0 1"/>
+      <material name="white">
+        <color rgba="0.9 0.9 0.9 1.0"/>
       </material>
     </visual>
   </link>
