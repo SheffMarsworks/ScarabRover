@@ -14,6 +14,8 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
+world_file = 'warehouse.sdf' # warehouse
+
 
 def generate_launch_description():
     rover_description = get_package_share_directory("rover_description")
@@ -24,6 +26,10 @@ def generate_launch_description():
         description="Absolute path to robot urdf file",
     )
 
+    simu_time = DeclareLaunchArgument(
+        'use_sim_time',
+        default_value='True',
+        description='Use simulation (Gazebo) clock if true')
     qt_qpa_platform = SetEnvironmentVariable(name="QT_QPA_PLATFORM", value="xcb")
 
     gazebo_resource_path = SetEnvironmentVariable(
@@ -57,11 +63,8 @@ def generate_launch_description():
             ]
         ),
         launch_arguments=[
-            (
-                "gz_args",
-                [" -v 4", " -r ", "empty.sdf"],
-            )
-        ],
+                ('gz_args', [rover_description + "/worlds/" + world_file, ' -v 4', ' -r'])
+        ]
     )
 
     gz_spawn_entity = Node(
@@ -87,6 +90,8 @@ def generate_launch_description():
             "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
             "/imu@sensor_msgs/msg/Imu[gz.msgs.IMU",
             "/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan",
+            '/camera/image_raw@sensor_msgs/msg/Image@ignition.msgs.Image',
+            '/camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo',
         ],
         remappings=[
             ("/imu", "/imu/out"),
@@ -95,6 +100,7 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
+            simu_time,
             qt_qpa_platform,
             model_arg,
             gazebo_resource_path,

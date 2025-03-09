@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="PI" value="3.14159265"/>
+  <joint name="realsense_joint" type="fixed">
+    <parent link="body_link"/>
+    <child link="realsense_link"/>
+    <origin xyz="-0.36 0.0 0.12" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="realsense_link">
+    <visual>
+      <geometry>
+        <box size="0.010 0.03 0.03"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Optical joint will rotate the camera because it uses a different coordinate system where two axis are inverted -->
+
+  <joint name="realsense_optical_joint" type="fixed">
+    <parent link="realsense_link"/>
+    <child link="realsense_link_optical"/>
+    <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+  </joint>
+
+  <link name="realsense_link_optical">
+  </link>
+
+  <gazebo reference="realsense_link">
+    <sensor name="camera" type="camera">
+      <ignition_frame_id>realsense_link</ignition_frame_id>
+      <optical_frame_id>realsense_link_optical</optical_frame_id>
+      <camera>
+        <horizontal_fov>1.085595</horizontal_fov>
+        <image>
+          <width>1920</width>
+          <height>1080</height>
+          <format>RGB_INT8</format>
+        </image>
+        <camera_info_topic>/camera/camera_info</camera_info_topic>
+        <clip>
+          <near>0.1</near>
+          <far>10</far>
+        </clip>
+        <distortion>
+          <k1>0.096559</k1>
+          <k2>-0.237840</k2>
+          <k3>0.113659</k3>
+          <p1>0.000396</p1>
+          <p2>0.000247</p2>
+          <center>0.5 0.5</center>
+        </distortion>
+      </camera>
+      <always_on>1</always_on>
+      <update_rate>10</update_rate>
+      <visualize>false</visualize>
+      <topic>camera/image_raw</topic>
+      <enable_metrics>true</enable_metrics>
+    </sensor>
+  </gazebo>
+
+
+
+</robot>

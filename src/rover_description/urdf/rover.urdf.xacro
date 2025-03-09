@@ -6,6 +6,8 @@
     <xacro:arg name="is_ignition" default="true"/>
     <xacro:include filename="$(find rover_description)/urdf/rover_gazebo.xacro" />
     <xacro:include filename="$(find rover_description)/urdf/rover_control.xacro" />
+    <xacro:include filename="$(find rover_description)/urdf/sensors/realsense.xacro" />
+
 
     <link name="base_footprint"/>
 
