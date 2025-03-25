@@ -32,6 +32,10 @@ The Marsworks Scarab project focuses on developing a robotic system for Mars exp
 
    ```bash
    rosdep install --from-paths src --ignore-src -r -y
+   sudo apt install ros-humble-joy-teleop
+   sudo apt install ros-humble-joint-state-broadcaster
+   sudo apt install ros-humble-diff-drive-controller
+   sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers
    ```
 
 4. Build the workspace:
