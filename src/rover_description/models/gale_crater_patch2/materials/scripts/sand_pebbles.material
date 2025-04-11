@@ -1,0 +1,16 @@
+material SandPebbles
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        // Relative to the location of the material script
+        texture ../textures/sand_pebbles.png
+        // Repeat the texture over the surface
+        scale 0.1 0.1
+      }
+    }
+  }
+}

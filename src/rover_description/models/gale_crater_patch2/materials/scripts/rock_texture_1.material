@@ -1,0 +1,16 @@
+material RockTexture1
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        // Relative to the location of the material script
+        texture ../textures/rock_texture_1.png
+        // Repeat the texture over the surface
+        scale 0.1 0.1
+      }
+    }
+  }
+}
