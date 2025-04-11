@@ -17,6 +17,24 @@
             </hardware>
         </xacro:unless>
 
+        <joint name="susLeft_joint_b">
+            <command_interface name="velocity">
+                <param name="min">-1</param>
+                <param name="max">1</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+
+        <joint name="susRight_joint_b">
+            <command_interface name="velocity">
+                <param name="min">-1</param>
+                <param name="max">1</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+
         <joint name="wheel1_joint">
             <command_interface name="velocity">
                 <param name="min">-1</param>

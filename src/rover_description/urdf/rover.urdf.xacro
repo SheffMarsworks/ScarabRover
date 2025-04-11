@@ -62,7 +62,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_left_link_a.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="yellow">
                 <color rgba="1 1 0 1"/>
@@ -71,7 +71,7 @@
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_left_link_a.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
 
@@ -94,7 +94,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_right_link_b.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_right_link_a.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="yellow">
                 <color rgba="1 1 0 1"/>
@@ -103,7 +103,7 @@
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_right_link_b.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_right_link_a.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
 
@@ -126,7 +126,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_right_link_a.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_right_link_b.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="yellow">
                 <color rgba="1 1 0 1"/>
@@ -135,7 +135,7 @@
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_right_link_a.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_right_link_b.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
 
@@ -158,7 +158,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_left_link_a.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="yellow">
                 <color rgba="1 1 0 1"/>
@@ -167,7 +167,7 @@
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_left_link_a.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
 
