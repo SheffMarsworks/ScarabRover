@@ -49,7 +49,7 @@
     <joint name="susLeft_joint" type="fixed">
         <parent link="body_link" />
         <child link="susLeft_link" />
-        <origin xyz ="-0.1 -0.2 0.04" rpy="0 0 -1.579795" />
+        <origin xyz ="-0.1 -0.239 0.04" rpy="0 0 -1.579795" />
         <axis xyz="1 0 0" />
     </joint>
     <link name="susLeft_link">
@@ -62,7 +62,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_left_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="yellow">
                 <color rgba="1 1 0 1"/>
@@ -71,7 +71,7 @@
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_left_link.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
 
@@ -141,6 +141,38 @@
 
     </link>
 
+    <joint name="susLeft_joint_b" type="continuous">
+        <parent link="susLeft_link" />
+        <child link="susLeft_link_b" />
+        <origin xyz ="0.052 -0.156485 -0.088953" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <link name="susLeft_link_b">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="2.0"/>
+            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+        </inertial>
+
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://rover_description/meshes/suspension_left_link_a.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="yellow">
+                <color rgba="1 1 0 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://rover_description/meshes/suspension_left_link_a.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+
+    </link>
+
     <!-- This is the front right wheel of the rover -->
     <joint name="wheel1_joint" type="continuous">
         <parent link="susRight_link_b" />
@@ -175,9 +207,9 @@
 
     <!-- This is the front left wheel of the rover -->
     <joint name="wheel2_joint" type="continuous">
-        <parent link="susLeft_link" />
+        <parent link="susLeft_link_b" />
         <child link="wheel2_link" />
-        <origin xyz ="0.1 -0.35 -0.3" rpy="0 0 0" />
+        <origin xyz ="0.05 -0.20796 -0.196506" rpy="0 0 0" />
         <axis xyz="1 0 0" />
     </joint>
     <link name="wheel2_link">
@@ -239,9 +271,9 @@
 
     <!-- This is the middle left wheel of the rover -->
     <joint name="wheel4_joint" type="continuous">
-        <parent link="susLeft_link" />
+        <parent link="susLeft_link_b" />
         <child link="wheel4_link" />
-        <origin xyz ="0.19 0.01 -0.3" rpy="0 0 0" />
+        <origin xyz ="0.1 0.168268 -0.211155" rpy="0 0 0" />
         <axis xyz="1 0 0" />
     </joint>
     <link name="wheel4_link">
@@ -303,7 +335,7 @@
     <joint name="wheel6_joint" type="continuous">
         <parent link="susLeft_link" />
         <child link="wheel6_link" />
-        <origin xyz ="0.05 0.35 -0.3" rpy="0 0 0" />
+        <origin xyz ="0.02 0.35 -0.3" rpy="0 0 0" />
         <axis xyz="1 0 0" />
     </joint>
     <link name="wheel6_link">
