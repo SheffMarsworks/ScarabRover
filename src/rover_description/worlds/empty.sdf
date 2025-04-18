@@ -66,6 +66,63 @@
       <pose>0 0 0 0 0 0</pose>
       <self_collide>false</self_collide>
     </model>
+    
+    <!-- New Ramp Model -->
+    <model name='ramp'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file://ramp.stl</uri>
+              <scale>0.1 0.01 0.004</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.8</mu>
+                <mu2>0.8</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file://ramp.stl</uri>
+              <scale>0.1 0.01 0.004</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.7 1</ambient>
+            <diffuse>0.5 0.5 0.7 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>10</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 1.5708 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
       <cast_shadows>true</cast_shadows>
@@ -87,3 +144,4 @@
     </light>
   </world>
 </sdf>
+
