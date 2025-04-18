@@ -27,8 +27,8 @@
 
         <joint name="wheel1_joint">
             <command_interface name="velocity">
-                <param name="min">-1</param>
-                <param name="max">1</param>
+                <param name="min">-0.7</param>
+                <param name="max">0.7</param>
             </command_interface>
             <state_interface name="position" />
             <state_interface name="velocity" />
@@ -36,8 +36,8 @@
 
         <joint name="wheel2_joint">
             <command_interface name="velocity">
-                <param name="min">-1</param>
-                <param name="max">1</param>
+                <param name="min">-0.7</param>
+                <param name="max">0.7</param>
             </command_interface>
             <state_interface name="position" />
             <state_interface name="velocity" />
@@ -45,8 +45,8 @@
 
         <joint name="wheel3_joint">
             <command_interface name="velocity">
-                <param name="min">-1</param>
-                <param name="max">1</param>
+                <param name="min">-0.7</param>
+                <param name="max">0.7</param>
             </command_interface>
             <state_interface name="position" />
             <state_interface name="velocity" />
@@ -54,8 +54,8 @@
 
         <joint name="wheel4_joint">
             <command_interface name="velocity">
-                <param name="min">-1</param>
-                <param name="max">1</param>
+                <param name="min">-0.7</param>
+                <param name="max">0.7</param>
             </command_interface>
             <state_interface name="position" />
             <state_interface name="velocity" />
@@ -63,8 +63,8 @@
 
         <joint name="wheel5_joint">
             <command_interface name="velocity">
-                <param name="min">-1</param>
-                <param name="max">1</param>
+                <param name="min">-0.7</param>
+                <param name="max">0.7</param>
             </command_interface>
             <state_interface name="position" />
             <state_interface name="velocity" />
@@ -72,8 +72,8 @@
 
         <joint name="wheel6_joint">
             <command_interface name="velocity">
-                <param name="min">-1</param>
-                <param name="max">1</param>
+                <param name="min">-0.7</param>
+                <param name="max">0.7</param>
             </command_interface>
             <state_interface name="position" />
             <state_interface name="velocity" />
