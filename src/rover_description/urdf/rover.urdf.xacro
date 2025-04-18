@@ -77,12 +77,50 @@
 
     </link>
 
+
+    <joint name="susLeft_joint_b" type="continuous">
+        <parent link="susLeft_link" />
+        <child link="susLeft_link_b" />
+        <origin xyz ="0.052 -0.156485 -0.088953" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <dynamics damping="0.1" friction="0.1"/>
+        <limit effort="50" velocity="1"/>
+    </joint>
+
+    <link name="susLeft_link_b">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="2.0"/>
+            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+        </inertial>
+
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="yellow">
+                <color rgba="1 1 0 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+
+    </link>
+
+
     <!-- This is the right suspension assembly -->
     <joint name="susRight_joint" type="fixed">
         <parent link="body_link" />
         <child link="susRight_link" />
         <origin xyz ="-0.1 0.21 0.04" rpy="0 0 -1.579795" />
         <axis xyz="1 0 0" />
+        <dynamics damping="0.1" friction="0.1"/>
+        <limit effort="50" velocity="1"/>
     </joint>
     <link name="susRight_link">
         <inertial>
@@ -136,38 +174,6 @@
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://rover_description/meshes/suspension_right_link_b.stl" scale="0.001 0.001 0.001" />
-            </geometry>
-        </collision>
-
-    </link>
-
-    <joint name="susLeft_joint_b" type="continuous">
-        <parent link="susLeft_link" />
-        <child link="susLeft_link_b" />
-        <origin xyz ="0.052 -0.156485 -0.088953" rpy="0 0 0" />
-        <axis xyz="1 0 0" />
-    </joint>
-
-    <link name="susLeft_link_b">
-        <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="2.0"/>
-            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
-        </inertial>
-
-        <visual>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-            <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
-            </geometry>
-            <material name="yellow">
-                <color rgba="1 1 0 1"/>
-            </material>
-        </visual>
-        <collision>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-            <geometry>
-                <mesh filename="package://rover_description/meshes/suspension_left_link_b.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
 
