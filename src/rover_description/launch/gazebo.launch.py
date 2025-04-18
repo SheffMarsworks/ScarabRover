@@ -14,8 +14,8 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
-# world_file = "mars.world.sdf"  # warehouse
-world_file = "empty.sdf"  # empty world
+world_file = "mars.world.sdf"  # mars world
+# world_file = "empty.sdf"  # empty world
 
 
 def generate_launch_description():
