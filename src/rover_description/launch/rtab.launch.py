@@ -24,10 +24,11 @@ def generate_launch_description():
     }]
 
     remappings=[
-          ('rgb/image', '/camera/image_raw'),
-          ('rgb/camera_info', '/camera/camera_info'),
-          ('depth/image', '/depth_camera'),
-          ('depth/camera_info', '/depth_camera/camera_info')
+        ('imu', '/imu/data'),
+        ('rgb/image', '/depth_camera/image_raw'),
+        ('rgb/camera_info', '/depth_camera/camera_info'),
+        ('depth/image', '/depth_camera/depth_image'),
+        ('depth/camera_info', '/depth_camera/camera_info')
     ]
 
     return LaunchDescription([

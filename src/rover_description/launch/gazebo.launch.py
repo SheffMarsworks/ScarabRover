@@ -92,7 +92,7 @@ def generate_launch_description():
         executable="parameter_bridge",
         arguments=[
             "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
-            "/imu@sensor_msgs/msg/Imu[gz.msgs.IMU",
+            "/imu/data_raw@sensor_msgs/msg/Imu[gz.msgs.IMU",
             "/camera/image_raw@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
             "/depth_camera/points@sensor_msgs/msg/PointCloud2@ignition.msgs.PointCloudPacked",
@@ -104,6 +104,12 @@ def generate_launch_description():
         ("/depth_camera/image", "/depth_camera/image_raw")
         ],
     )
+
+    imu_filter = Node(
+            package='imu_filter_madgwick', executable='imu_filter_madgwick_node', output='screen',
+            parameters=[{'use_mag': False, 
+                         'world_frame':'enu', 
+                         'publish_tf':True}],)
 
     return LaunchDescription(
         [
@@ -130,5 +136,6 @@ def generate_launch_description():
             gazebo,
             gz_spawn_entity,
             gz_ros2_bridge,
+            imu_filter,
         ]
     )
