@@ -14,8 +14,9 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
-world_file = "mars.world.sdf"  # mars world
+# world_file = "mars.world.sdf"  # mars world
 # world_file = "empty.sdf"  # empty world
+world_file = "warehouse.sdf"  # warehouse world
 
 
 def generate_launch_description():
@@ -92,12 +93,11 @@ def generate_launch_description():
         arguments=[
             "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
             "/imu@sensor_msgs/msg/Imu[gz.msgs.IMU",
-            "/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan",
             "/camera/image_raw@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
             "/depth_camera/points@sensor_msgs/msg/PointCloud2@ignition.msgs.PointCloudPacked",
             "/depth_camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
-            "/depth_camera/image@sensor_msgs/msg/Image@ignition.msgs.Image",
+            "/depth_camera@sensor_msgs/msg/Image@ignition.msgs.Image",
         ],
         remappings=[
             ("/imu", "/imu/out"),
