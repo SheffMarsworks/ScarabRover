@@ -6,24 +6,12 @@ from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
-    hardware_interface = IncludeLaunchDescription(
-        os.path.join(
-            get_package_share_directory("rover_firmware"),
-            "launch",
-            "hardware_interface.launch.py"
-        ),
-    )
-    
-    controller = IncludeLaunchDescription(
+    mavros_controller = IncludeLaunchDescription(
         os.path.join(
             get_package_share_directory("rover_controller"),
             "launch",
-            "controller.launch.py"
+            "mavros_controller.launch.py"
         ),
-        launch_arguments={
-            "use_simple_controller": "False",
-            "use_python": "False"
-        }.items(),
     )
     
     joystick = IncludeLaunchDescription(
@@ -36,15 +24,8 @@ def generate_launch_description():
             "use_sim_time": "False"
         }.items()
     )
-
-    imu_driver_node = Node(
-        package="rover_firmware",
-        executable="mpu6050_driver.py"
-    )
     
     return LaunchDescription([
-        hardware_interface,
-        controller,
+        mavros_controller,
         joystick,
-        imu_driver_node,
     ])

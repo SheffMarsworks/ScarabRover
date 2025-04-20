@@ -30,9 +30,6 @@ def generate_launch_description():
                 "launch",
                 "controller.launch.py"
             ),
-            launch_arguments={
-                "use_python": "False"
-            }.items(),
         )
 
         launch_descriptions = [gazebo, controller]
