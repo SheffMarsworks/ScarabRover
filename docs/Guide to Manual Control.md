@@ -136,3 +136,4 @@ The teleop node publishes velocity commands to `/mavros/setpoint_velocity/cmd_ve
 - [Matek H743-WING Documentation](https://ardupilot.org/rover/docs/common-matekh743-wing.html)
 - [MAVROS GitHub Repository](https://github.com/mavlink/mavros)
 - [ROS2 Joystick Control Documentation](https://index.ros.org/p/teleop_twist_joy/)
+- [Ardupilot Motor and Servo Configuration](https://ardupilot.org/rover/docs/rover-motor-and-servo-configuration.html)
