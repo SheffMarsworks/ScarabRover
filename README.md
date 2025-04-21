@@ -6,7 +6,7 @@ This repository contains the ROS2 workspace for simulating the Marsworks Scarab 
 
 The Marsworks Scarab project focuses on developing a robotic system for Mars exploration. This workspace provides the necessary packages and configurations to simulate the Scarab rover in a Gazebo environment using ROS2.
 
-<center> <img src="assets/scarab-gazebo-sim.gif" alt="Scarab Rover Simulation in Gazebo"> </center>
+<center> <img src="assets/rover_gazebo_depth.gif" alt="Scarab Rover Simulation in Gazebo"> </center>
 
 ## Prerequisites
 
