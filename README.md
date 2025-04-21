@@ -1,17 +1,13 @@
-# Marsworks Scarab ROS2 Workspace
+# Marsworks Scarab
 
 This repository contains the ROS2 workspace for simulating the Marsworks Scarab rover using Gazebo.
-
-## Overview
-
-The Marsworks Scarab project focuses on developing a robotic system for Mars exploration. This workspace provides the necessary packages and configurations to simulate the Scarab rover in a Gazebo environment using ROS2.
 
 <center> <img src="assets/rover_gazebo_depth.gif" alt="Scarab Rover Simulation in Gazebo"> </center>
 
 ## Prerequisites
 
 - ROS2 (Humble or later recommended)
-- Gazebo Harmonic
+- Gazebo Ignition
 - Ubuntu 22.04 or later
 
 ## Installation
@@ -19,13 +15,13 @@ The Marsworks Scarab project focuses on developing a robotic system for Mars exp
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/renzodamgo/marsworks_scarab_ws.git
+   git clone https://github.com/renzodamgo/ScarabRover.git
    ```
 
 2. Navigate to the workspace:
 
    ```bash
-   cd marsworks_scarab_ws
+   cd ScarabRover
    ```
 
 3. Install dependencies:
