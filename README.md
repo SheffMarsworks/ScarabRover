@@ -43,8 +43,6 @@ The Marsworks Scarab project focuses on developing a robotic system for Mars exp
    colcon build
    ```
 
-Here's an improved version of your Markdown README:
-
 ## Run Simulation
 
 To run the Scarab rover simulation, follow these steps:
