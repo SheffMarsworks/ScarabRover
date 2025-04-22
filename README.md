@@ -15,7 +15,7 @@ This repository contains the ROS2 workspace for simulating the Marsworks Scarab 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/renzodamgo/ScarabRover.git
+   git clone https://github.com/SheffMarsworks/ScarabRover.git
    ```
 
 2. Navigate to the workspace:
