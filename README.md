@@ -35,6 +35,10 @@ This repository contains the ROS2 workspace for simulating the Marsworks Scarab 
    colcon build
    ```
 
+## Documentation
+- [Run Simulation (Gazebo)](https://github.com/SheffMarsworks/ScarabRover/blob/main/docs/Guide%20to%20Run%20Simulation.md): Load URDF and World, test Rover with joystick or keyboard in simulation.
+- [Guide to Manual Control](https://github.com/SheffMarsworks/ScarabRover/blob/main/docs/Guide%20to%20Manual%20Control.md): Connect flight controller to GCS using MAVROS, and control real rover with joystick.
+
 ## Acknowledgments
 - [Project Marsworks Software Team](https://marsworks.sites.sheffield.ac.uk/)
 - [@Jan](https://github.com/JanUniAccount) for providing the [original Mars rover simulation URDF](https://github.com/JanUniAccount/mars_rover_pkg) in ROS1
