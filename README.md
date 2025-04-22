@@ -12,15 +12,11 @@ This repository contains the ROS2 workspace for simulating the Marsworks Scarab 
 
    ```bash
    git clone https://github.com/SheffMarsworks/ScarabRover.git
-   ```
-
-2. Navigate to the workspace:
-
-   ```bash
+   
    cd ScarabRover
    ```
 
-3. Install dependencies:
+2. Install dependencies:
 
    ```bash
    rosdep install --from-paths src --ignore-src -r -y
@@ -30,7 +26,8 @@ This repository contains the ROS2 workspace for simulating the Marsworks Scarab 
    sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers
    ```
 
-4. Build the workspace:
+3. Build the workspace:
+
    ```bash
    colcon build
    ```
