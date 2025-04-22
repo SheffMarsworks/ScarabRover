@@ -12,6 +12,13 @@ To run the Scarab rover simulation, follow these steps:
 2. **Launch the Simulation**
    **Important:** If you plan to control the rover with a joystick, connect it before running this command.
    ```bash
+   # Launch with joystick control
+   ros2 launch rover_bringup simulated_robot.launch.py teleop:=joystick
+   
+   # Launch with keyboard control
+   ros2 launch rover_bringup simulated_robot.launch.py teleop:=keyboard
+   
+   # Launch without teleop controls (for autonomous operation or testing)
    ros2 launch rover_bringup simulated_robot.launch.py
    ```
 
