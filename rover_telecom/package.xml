@@ -7,8 +7,8 @@
   <license>Apache 2.0</license>
   <depend>rclpy</depend>
   <exec_depend>std_msgs</exec_depend>
-  <exec_depend>onvif-zeep</exec_depend>
-  <exec_depend>pynput</exec_depend>
+  <exec_depend>onvif_zeep</exec_depend>
+  <exec_depend>pynput-pip</exec_depend>
 
 
 
