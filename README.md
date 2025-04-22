@@ -52,7 +52,7 @@ Main components:
 
 ## Acknowledgments
 
-- [Project Marsworks Software Team](https://marsworks.sites.sheffield.ac.uk/)
+- [Project Marsworks Software Team](https://marsworks.sites.sheffield.ac.uk/team#h.4kuzgvqqcu52)
 - [@Jan](https://github.com/JanUniAccount) for providing the [original Mars rover simulation URDF](https://github.com/JanUniAccount/mars_rover_pkg) in ROS1
 
 ### Contributors
