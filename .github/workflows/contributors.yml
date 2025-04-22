@@ -3,7 +3,8 @@ name: Update Contributors
 on:
   push:
     branches: [ main ] 
-
+permissions:
+  contents: write 
 jobs:
   update-contributors:
     runs-on: ubuntu-latest
