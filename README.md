@@ -2,6 +2,9 @@
 
 ROS2 workspace developed to achieve manual control and autonomous navigation in both simulation and real-world environments for the [Anatolian Rover Challenge (ARC) 2025](https://www.anatolianrover.space/arc-25-missions).
 
+[![Static Badge](https://img.shields.io/badge/Renzo%20Damian-orange?label=Software%20Lead&link=https%3A%2F%2Fgithub.com%2Frenzodamgo)
+](https://github.com/renzodamgo)
+
 Main components:
 
 - Rover Simulation (Gazebo)
