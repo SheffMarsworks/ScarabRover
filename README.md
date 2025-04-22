@@ -1,4 +1,4 @@
-Project Marsworks: Scarab Mars Rover
+# Project Marsworks: Scarab Mars Rover
 
 ROS2 workspace developed to achieve manual control and autonomous navigation in both simulation and real-world environments for the [Anatolian Rover Challenge (ARC) 2025](https://www.anatolianrover.space/arc-25-missions).
 
