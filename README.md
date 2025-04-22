@@ -31,11 +31,7 @@ ROS2 workspace developed to achieve manual control and autonomous navigation in 
 2. Install dependencies:
 
    ```bash
-   rosdep install --from-paths src --ignore-src -r -y
-   sudo apt install ros-humble-joy-teleop
-   sudo apt install ros-humble-joint-state-broadcaster
-   sudo apt install ros-humble-diff-drive-controller
-   sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers
+   rosdep install --from-paths . --ignore-src -r -y
    ```
 
 3. Build the workspace:
