@@ -1,5 +1,13 @@
-# Marsworks Scarab
-This repository contains the ROS2 workspace for simulating the Marsworks Scarab rover using Gazebo.
+Project Marsworks: Scarab Mars Rover
+
+ROS2 workspace developed to achieve manual control and autonomous navigation in both simulation and real-world environments for the [Anatolian Rover Challenge (ARC) 2025](https://www.anatolianrover.space/arc-25-missions).
+
+Main components:
+
+- Rover Simulation (Gazebo)
+- Rover Teleoperation (MAVROS)
+- Rover Autonomous Navigation (RTAB + NAV2)
+
 <center> <img src="assets/rover_gazebo_depth.gif" alt="Scarab Rover Simulation in Gazebo"> </center>
 
 ## Prerequisites
