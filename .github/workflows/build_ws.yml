@@ -20,6 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get update
+          apt-get install python3-pip
           rosdep update
           cd $GITHUB_WORKSPACE
           rosdep install --from-paths . --ignore-src --rosdistro humble -y
