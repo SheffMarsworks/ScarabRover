@@ -54,3 +54,8 @@ Main components:
 
 - [Project Marsworks Software Team](https://marsworks.sites.sheffield.ac.uk/)
 - [@Jan](https://github.com/JanUniAccount) for providing the [original Mars rover simulation URDF](https://github.com/JanUniAccount/mars_rover_pkg) in ROS1
+
+## Contributors
+<a href="https://github.com/SheffMarsworks/ScarabRover/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=SheffMarsworks/ScarabRover" />
+</a>
