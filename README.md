@@ -57,5 +57,5 @@ Main components:
 
 ### Contributors
 <a href="https://github.com/SheffMarsworks/ScarabRover/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=SheffMarsworks/ScarabRover" />
+  <img src="https://sheffmarsworks.github.io/ScarabRover/CONTRIBUTORS.svg" />
 </a>
