@@ -29,5 +29,5 @@ To run the Scarab rover simulation, follow these steps:
    - **Deadman Button:** Press the deadman button (R1 or RB) to enable command reception.
 
    <center>
-   <img src="assets/scarab-joystick.gif" alt="Scarab Rover Joystick Simulation in Gazebo">
+   <img src="../assets/scarab-joystick.gif" alt="Scarab Rover Joystick Simulation in Gazebo">
    </center>
