@@ -5,26 +5,17 @@
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>
-    <plugin
-      filename="ignition-gazebo-physics-system"
-      name="gz::sim::systems::Physics">
+    <plugin filename="ignition-gazebo-physics-system" name="gz::sim::systems::Physics">
     </plugin>
-    <plugin
-      filename="ignition-gazebo-user-commands-system"
-      name="gz::sim::systems::UserCommands">
+    <plugin filename="ignition-gazebo-user-commands-system" name="gz::sim::systems::UserCommands">
     </plugin>
-    <plugin
-      filename="libignition-gazebo-sensors-system.so"
-      name="ignition::gazebo::systems::Sensors">
+    <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
-    <plugin
-      filename="ignition-gazebo-scene-broadcaster-system"
-      name="gz::sim::systems::SceneBroadcaster">
+    <plugin filename="ignition-gazebo-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster">
     </plugin>
-    
-    <plugin filename="gz-sim-imu-system"
-        name="gz::sim::systems::Imu">
+
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu">
     </plugin>
 
     <light type="directional" name="sun">
@@ -67,13 +58,13 @@
         </visual>
       </link>
     </model>
-    
+
     <include>
       <static>true</static>
       <pose>0 1 0 0.0 0.0 1.57</pose>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone</uri>
     </include>
-    
+
     <include>
       <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Warehouse</uri>
       <name>warehouse</name>

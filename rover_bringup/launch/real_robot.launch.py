@@ -10,22 +10,22 @@ def generate_launch_description():
         os.path.join(
             get_package_share_directory("rover_controller"),
             "launch",
-            "mavros_controller.launch.py"
+            "mavros_controller.launch.py",
         ),
     )
-    
+
     joystick = IncludeLaunchDescription(
         os.path.join(
             get_package_share_directory("rover_controller"),
             "launch",
-            "joystick_teleop.launch.py"
+            "joystick_teleop.launch.py",
         ),
-        launch_arguments={
-            "use_sim_time": "False"
-        }.items()
+        launch_arguments={"use_sim_time": "False"}.items(),
     )
-    
-    return LaunchDescription([
-        mavros_controller,
-        joystick,
-    ])
+
+    return LaunchDescription(
+        [
+            mavros_controller,
+            joystick,
+        ]
+    )

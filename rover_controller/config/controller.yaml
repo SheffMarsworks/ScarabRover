@@ -5,16 +5,16 @@ controller_manager:
 
     rover_controller:
       type: diff_drive_controller/DiffDriveController
-    
+
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
-    
+
 rover_controller:
   ros__parameters:
     publish_rate: 50.0
     base_frame_id: base_footprint
-    left_wheel_names: ['wheel2_joint','wheel4_joint','wheel6_joint']
-    right_wheel_names: ['wheel1_joint','wheel3_joint','wheel5_joint']
+    left_wheel_names: ["wheel2_joint", "wheel4_joint", "wheel6_joint"]
+    right_wheel_names: ["wheel1_joint", "wheel3_joint", "wheel5_joint"]
     wheel_separation: 0.7
     wheel_radius: 0.123
     use_stamped_vel: true

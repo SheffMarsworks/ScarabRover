@@ -18,10 +18,7 @@ def generate_launch_description():
     simple_controller = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["rover_controller",
-                "--controller-manager",
-                "/controller_manager"
-        ]
+        arguments=["rover_controller", "--controller-manager", "/controller_manager"],
     )
 
     return LaunchDescription(

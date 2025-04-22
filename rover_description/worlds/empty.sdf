@@ -1,4 +1,5 @@
-<sdf version='1.9'>
+<?xml version='1.0'?>
+<sdf version="1.9">
   <world name='empty'>
     <physics name='1ms' type='ignored'>
       <max_step_size>0.001</max_step_size>
@@ -66,7 +67,7 @@
       <pose>0 0 0 0 0 0</pose>
       <self_collide>false</self_collide>
     </model>
-    
+
     <!-- New Ramp Model -->
     <model name='ramp'>
       <static>true</static>
@@ -122,7 +123,7 @@
       <pose>0 0 0 1.5708 0 0</pose>
       <self_collide>false</self_collide>
     </model>
-    
+
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
       <cast_shadows>true</cast_shadows>
@@ -144,4 +145,3 @@
     </light>
   </world>
 </sdf>
-

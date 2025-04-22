@@ -83,7 +83,7 @@ def generate_launch_description():
             "-y",
             "-1.0",  # Y position in meters
             "-z",
-            "0.15", # Z position in meters
+            "0.15",  # Z position in meters
         ],
     )
 
@@ -100,16 +100,15 @@ def generate_launch_description():
             "/depth_camera/image@sensor_msgs/msg/Image@ignition.msgs.Image",
             "/depth_camera/depth_image@sensor_msgs/msg/Image@ignition.msgs.Image",
         ],
-        remappings=[
-        ("/depth_camera/image", "/depth_camera/image_raw")
-        ],
+        remappings=[("/depth_camera/image", "/depth_camera/image_raw")],
     )
 
     imu_filter = Node(
-            package='imu_filter_madgwick', executable='imu_filter_madgwick_node', output='screen',
-            parameters=[{'use_mag': False, 
-                         'world_frame':'enu', 
-                         'publish_tf':True}],)
+        package="imu_filter_madgwick",
+        executable="imu_filter_madgwick_node",
+        output="screen",
+        parameters=[{"use_mag": False, "world_frame": "enu", "publish_tf": True}],
+    )
 
     return LaunchDescription(
         [

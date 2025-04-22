@@ -8,7 +8,9 @@ from ament_index_python.packages import get_package_share_directory
 import os
 
 # In your main function or class initialization
-CONFIG_FILE = os.path.join(get_package_share_directory('rover_telecom'), 'config', 'ovif_config.json')
+CONFIG_FILE = os.path.join(
+    get_package_share_directory("rover_telecom"), "config", "ovif_config.json"
+)
 
 
 class CameraControl:

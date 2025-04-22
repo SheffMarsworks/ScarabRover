@@ -6,27 +6,27 @@ from launch.actions import DeclareLaunchArgument
 from ament_index_python.packages import get_package_share_directory
 import os
 
+
 def generate_launch_description():
-    mavros_dir = get_package_share_directory('mavros')
-    
+    mavros_dir = get_package_share_directory("mavros")
+
     fcu_url_arg = DeclareLaunchArgument(
-        'fcu_url',
-        default_value='/dev/ttyACM0:115200',
-        description='URL for connecting to the flight controller'
+        "fcu_url",
+        default_value="/dev/ttyACM0:115200",
+        description="URL for connecting to the flight controller",
     )
-    
+
     # Launch MAVROS using APM (ArduPilot) configuration
     apm_launch = IncludeLaunchDescription(
-        XMLLaunchDescriptionSource(
-            os.path.join(mavros_dir, 'launch', 'apm.launch')
-        ),
+        XMLLaunchDescriptionSource(os.path.join(mavros_dir, "launch", "apm.launch")),
         launch_arguments={
-            'fcu_url': LaunchConfiguration('fcu_url'),
-        }.items()
+            "fcu_url": LaunchConfiguration("fcu_url"),
+        }.items(),
     )
-    
-    return LaunchDescription([
-        fcu_url_arg,
-        apm_launch,
-    ])
 
+    return LaunchDescription(
+        [
+            fcu_url_arg,
+            apm_launch,
+        ]
+    )
