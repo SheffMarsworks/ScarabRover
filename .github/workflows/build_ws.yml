@@ -1,0 +1,31 @@
+name: ROS2 Humble - Build Workspace
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build ROS2 Workspace
+    runs-on: ubuntu-latest
+    container:
+      image: osrf/ros:humble-desktop
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          apt-get update
+          rosdep update
+          cd $GITHUB_WORKSPACE
+          rosdep install --from-paths . --ignore-src --rosdistro humble -y
+
+      - name: Build packages
+        run: |
+          cd $GITHUB_WORKSPACE
+          . /opt/ros/humble/setup.sh
+          colcon build --symlink-install
