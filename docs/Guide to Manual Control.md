@@ -115,6 +115,9 @@ Connect your joystick before launching the system. Once launched:
 
 The teleop node publishes velocity commands to `/mavros/setpoint_velocity/cmd_vel_unstamped`, which ArduPilot uses to generate appropriate PWM signals for the motors.
 
+## ROS2 Nodes Joystick Control Diagram
+![Manual Control Diagram](<../assets/Manual Control Diagram.jpg>)
+
 ## Troubleshooting
 
 ### Common Issues
