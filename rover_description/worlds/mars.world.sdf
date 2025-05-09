@@ -2,7 +2,7 @@
 <sdf version="1.9">
   <world name="mars_world">
     <physics name="1ms" type="ogre2">
-      <max_step_size>0.001</max_step_size>
+      <max_step_size>0.005</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>
     <plugin filename="ignition-gazebo-physics-system" name="gz::sim::systems::Physics">

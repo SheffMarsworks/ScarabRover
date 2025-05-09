@@ -14,9 +14,9 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
-# world_file = "mars.world.sdf"  # mars world
+world_file = "mars.world.sdf"  # mars world
 # world_file = "empty.sdf"  # empty world
-world_file = "warehouse.sdf"  # warehouse world
+# world_file = "warehouse.sdf"  # warehouse world
 
 
 def generate_launch_description():
@@ -120,12 +120,13 @@ def generate_launch_description():
             ),
             SetEnvironmentVariable(
                 name="GAZEBO_MODEL_PATH",
-                value="/home/damian/marsworks_scarab_ws/src/rover_description/models:"
+                value=os.path.join(rover_description, "models")
+                + ":"
                 + os.environ.get("GAZEBO_MODEL_PATH", ""),
             ),
             SetEnvironmentVariable(
                 name="IGN_GAZEBO_RESOURCE_PATH",
-                value="/home/damian/marsworks_scarab_ws/src/rover_description/models",
+                value=os.path.join(rover_description, "models")
             ),
             simu_time,
             qt_qpa_platform,
