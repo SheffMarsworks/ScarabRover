@@ -6,8 +6,6 @@ capture = cv2.VideoCapture(0)
 frame_width = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
-print(f"Camera Frame Size: {frame_width}x{frame_height}")
-
 # Load ArUco dictionary and detector parameters
 dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_5X5_1000)
 parameters = cv2.aruco.DetectorParameters()
@@ -47,9 +45,12 @@ while capture.isOpened():
             else:
                 print("Marker", ids[i], "detected in the center")
 
+            # FPrint coordinates
+            print("The coordinates are: x = " + str(center_x) + " y = " + str(center_y))
+
     # Center Lines
-    cv2.line(frame, (frame_width//2-100, 0), (frame_width//2-100, frame_height), (0, 255, 0), 2)
-    cv2.line(frame, (frame_width//2+100, 0), (frame_width//2+100, frame_height), (0, 255, 0), 2)
+    # cv2.line(frame, (frame_width//2-100, 0), (frame_width//2-100, frame_height), (0, 255, 0), 2)
+    # cv2.line(frame, (frame_width//2+100, 0), (frame_width//2+100, frame_height), (0, 255, 0), 2)
 
     cv2.imshow("Aruco Detection", frame)
 
