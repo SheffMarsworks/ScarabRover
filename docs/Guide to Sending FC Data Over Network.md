@@ -4,7 +4,7 @@ This guide covers how to wirelessly access flight controller data on a pc being 
 Both devices use Windows 10
 
 ## Prerequisites
-* Two devices with MissionPlanner and MAVProxy installer
+* Two devices with MissionPlanner and MAVProxy installed
 * Router
 * Flight controller
 
