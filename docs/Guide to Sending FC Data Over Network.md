@@ -48,7 +48,7 @@ Setup should look like this:
 1. Go to "Windows Defender Firewall with Advanced Security”
 2. Click "Outbound rules" then "New rule"
 
-    ![firewall](<../assets/firewall.PNG>)\
+    ![firewall](<../assets/firewall.png>)\
 
 3. Select "Port" and click "Next"
 4. Select "UDP", type `14550` in "Specific remote ports:" and click "Next"
