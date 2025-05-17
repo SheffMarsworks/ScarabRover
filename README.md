@@ -44,6 +44,7 @@ ROS2 workspace developed to achieve manual control and autonomous navigation in 
 
 - [Run Simulation (Gazebo)](https://github.com/SheffMarsworks/ScarabRover/blob/main/docs/Guide%20to%20Run%20Simulation.md): Load URDF and World, test Rover with joystick or keyboard in simulation.
 - [Guide to Manual Control](https://github.com/SheffMarsworks/ScarabRover/blob/main/docs/Guide%20to%20Manual%20Control.md): Connect flight controller to GCS using MAVROS, and control real rover with joystick.
+- [Sending FC Data Over Network](https://github.com/SheffMarsworks/ScarabRover/blob/main/docs/Guide%20to%20Sending%20FC%20Data%20Over%20Network.md): Access the Flight Controller data wirelessly on your device
 
 ## Acknowledgments
 
