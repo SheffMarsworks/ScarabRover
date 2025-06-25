@@ -15,8 +15,8 @@ from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
 # world_file = "mars.world.sdf"  # mars world
-# world_file = "empty.sdf"  # empty world
-world_file = "warehouse.sdf"  # warehouse world
+world_file = "empty.sdf"  # empty world
+# world_file = "warehouse.sdf"  # warehouse world
 
 
 def generate_launch_description():

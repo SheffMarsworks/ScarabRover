@@ -12,4 +12,11 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(
+  PROGRAMS
+    scripts/detect_node.py  
+    scripts/follower_node.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 ament_package()

@@ -15,7 +15,7 @@
       <render_engine>ogre2</render_engine>
     </plugin>
 
-    <gravity>0 0 -9.8000000000000007</gravity>
+    <gravity>0 0 -9.81</gravity>
     <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
     <scene>
@@ -128,6 +128,13 @@
       <pose>0 0 0 1.5708 0 0</pose>
       <self_collide>false</self_collide>
     </model>
+
+    <!-- Aruco Marker -->
+    <include>
+      <uri>file:///home/student/.ignition/fuel/fuel.gazebosim.org/myoan/models/aruco flat sign id 124/1</uri>
+      <name>aruco_tag_124</name>
+      <pose>-5.05335 -1.84465 0 0 -1.5708 3.14159</pose>
+    </include>
 
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>

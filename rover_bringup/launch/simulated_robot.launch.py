@@ -8,6 +8,7 @@ from launch.actions import (
 from launch.substitutions import LaunchConfiguration
 from ament_index_python.packages import get_package_share_directory
 
+from launch_ros.actions import Node
 
 def generate_launch_description():
     # Declare the teleop argument with an empty default value (which will be treated as "none")
@@ -35,9 +36,21 @@ def generate_launch_description():
                 "controller.launch.py",
             ),
         )
+        # <-- Add this Node here to spawn ros2_control_node with your YAML
+        ros2_control_node = Node(
+            package="controller_manager",
+            executable="ros2_control_node",
+            parameters=[
+                os.path.join(
+                    get_package_share_directory("rover_controller"),
+                    "config",
+                    "rover_controllers.yaml",
+                )
+            ],
+            output="screen",
+        )
 
-        launch_descriptions = [gazebo, controller]
-
+        launch_descriptions = [gazebo, controller, ros2_control_node]  # Add the node here
         if teleop == "joystick":
             joystick = IncludeLaunchDescription(
                 os.path.join(

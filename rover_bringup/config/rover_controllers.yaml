@@ -1,0 +1,26 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+    use_sim_time: true
+
+    rover_controller:
+      type: diff_drive_controller/DiffDriveController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+rover_controller:
+  ros__parameters:
+    publish_rate: 50.0
+    base_frame_id: base_footprint
+    left_wheel_names: ["wheel2_joint", "wheel4_joint", "wheel6_joint"]
+    right_wheel_names: ["wheel1_joint", "wheel3_joint", "wheel5_joint"]
+    wheel_separation: 0.7
+    wheel_radius: 0.123
+    use_stamped_vel: true
+    wheels_per_side: 3
+    max_linear_velocity: 1.0
+    min_linear_velocity: -1.0
+    max_angular_velocity: 8.0
+    min_angular_velocity: -8.0
+    odom_topic: encoder
